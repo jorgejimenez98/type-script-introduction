@@ -7,7 +7,31 @@ export class Pokemon {
     this.name = name
     console.log("Constructor Called")
   } */
-  constructor(public readonly id: number, public name: string) {} // Forma Sencilla
+
+  constructor(
+    // Forma Sencilla
+    public readonly id: number, // ReadOnly no se puede settear
+    public name: string
+  ) {}
+
+  get imageUrl(): string {
+    // Getter Example
+    return `https://pokemon.com/${this.id}.jpg`
+  }
+
+  public scream() {
+    // Methods Example
+    console.log(`${this.name.toUpperCase()}`)
+  }
+  
+  private speak() {
+    // Solo se puede llamar dentro de la clase
+    console.log(`${this.name} ${this.name}`)
+  }
 }
 
 export const p1 = new Pokemon(12, "New Name")
+
+console.log(p1.imageUrl)
+p1.scream()
+p1.speak()
