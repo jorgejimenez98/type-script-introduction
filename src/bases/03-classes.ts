@@ -26,7 +26,7 @@ export class Pokemon {
     console.log(`${this.name.toUpperCase()}`)
   }
 
-  private speak() {
+  public speak() {
     // Solo se puede llamar dentro de la clase
     console.log(`${this.name} ${this.name}`)
   }
@@ -41,5 +41,6 @@ export const p1 = new Pokemon(12, "New Name")
 
 console.log(p1.imageUrl)
 p1.scream()
+p1.speak()
 //p1.speak()
 console.log(await p1.getMoves())
