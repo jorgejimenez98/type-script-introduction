@@ -1,3 +1,4 @@
+import axios from 'axios'
 export class Pokemon {
   /* public id: number = 1 // Init Value
   public name: string
@@ -23,10 +24,15 @@ export class Pokemon {
     // Methods Example
     console.log(`${this.name.toUpperCase()}`)
   }
-  
+
   private speak() {
     // Solo se puede llamar dentro de la clase
     console.log(`${this.name} ${this.name}`)
+  }
+
+  async getMoves() {
+    const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/4')
+    return data?.moves
   }
 }
 
@@ -34,4 +40,5 @@ export const p1 = new Pokemon(12, "New Name")
 
 console.log(p1.imageUrl)
 p1.scream()
-p1.speak()
+//p1.speak()
+console.log(await p1.getMoves())
