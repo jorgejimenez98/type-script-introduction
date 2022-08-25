@@ -1,7 +1,7 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import { setupCounter } from './counter'
-import { p1 } from './bases/05-decorators'
+import { p1 } from './bases/06-decorators-2'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -11,7 +11,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <a href="https://www.typescriptlang.org/" target="_blank">
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
-    <h1>Vite + ${p1.imageUrl}</h1>
+    <h1>Vite + ${p1.name}</h1>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
