@@ -18,3 +18,8 @@ export const pokemon: Pokemon = {
     id: 19,
     name: "Example Name",
 }
+
+
+export const pokemons: Pokemon[] = []
+
+pokemons.push(pokemon)
